@@ -12,6 +12,7 @@ def store_data(data):
     name = json_data["name"]
     target_file_path = TARGET_DIR + name + TARGET_FORMAT
 
+    # Will NOT overwrite file with the same name
     if not os.path.exists(target_file_path):
         f = open(target_file_path, "w+")
         f.write(data)
